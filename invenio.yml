@@ -1,0 +1,4 @@
+---
+- name: Invenio role
+  hosts: localhost
+  roles: invenio-docker-role
