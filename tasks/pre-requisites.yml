@@ -1,0 +1,13 @@
+---
+# pre-requisites.yml
+- name: Install OS base pre-requisites (Debian)
+  apt:
+    name: {{ item }}
+    state: present
+  with_items: "{{ pre-requisites }}.{{ ansible_os_family }}"
+
+- name: Install OS base pre-requisites (RedHat)
+  yum:
+    name: {{ item }}
+    state: present
+  with_items: "{{ pre-requisites.ansible_os_family }}"
