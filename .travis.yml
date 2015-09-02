@@ -12,8 +12,8 @@ cache:
   - pip
 
 before_install:
-  - docker pull ubuntu/14.04
-  - docker pull centos/6
+  - docker pull ubuntu:14.04
+  - docker pull centos:6
   - docker build
 
 notifications:
