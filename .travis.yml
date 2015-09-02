@@ -1,0 +1,17 @@
+# Took some inspiration from https://github.com/inveniosoftware/invenio/blob/master/.travis.yml
+
+sudo: required
+
+# not using OS-level services since we want these in different containers
+services:
+  - docker
+
+
+cache:
+  - apt
+  - pip
+
+before_install:
+  - docker pull ubuntu/14.04
+  - docker pull centos/6
+  - docker build 
