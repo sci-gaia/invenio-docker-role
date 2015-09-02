@@ -6,7 +6,7 @@
     name: "{{ item }}"
     state: present
   with_items: "{{ prerequisites }}.{{ ansible_os_family }}"
-  when: "{{ ansible_os_family }} == Debian"
+  when: "{{ ansible_os_family }} == 'Debian'"
 
 - name: Install OS base pre-requisites (RedHat)
   sudo: true
@@ -14,4 +14,4 @@
     name: "{{ item }}"
     state: present
   with_items: "{{ prerequisites.ansible_os_family }}"
-  when: "{{ ansible_os_family }} == RedHat"
+  when: "{{ ansible_os_family }} == 'RedHat'"

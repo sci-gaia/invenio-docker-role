@@ -1,7 +1,16 @@
-Role Name
+[![Build Status](https://travis-ci.org/brucellino/invenio-docker-role.svg?branch=master)](https://travis-ci.org/brucellino/invenio-docker-role)
+
+invenio-docker-role
 =========
 
 `invenio-docker-role` - a role to deliver [invenio](https://github.com/inveniosoftware/invenio).
+
+Invenio is built with
+
+  * mysql server
+  * Node.js
+  * redis
+
 
 Requirements
 ------------
@@ -17,14 +26,14 @@ Role Variables
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No other Galaxy dependencies.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+It's unlikely that you'll be orchestrating more than one invenio server, although you might want to configure the mysql server separately.
 
-    - hosts: servers
+    - hosts: local
       roles:
          - { role: username.rolename, x: 42 }
 
