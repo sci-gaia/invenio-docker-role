@@ -14,4 +14,7 @@ cache:
 before_install:
   - docker pull ubuntu/14.04
   - docker pull centos/6
-  - docker build 
+  - docker build
+
+notifications:
+  slack: scigaia:byLKjoXfG8AKlsMgVK7q3Ooz
