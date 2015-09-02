@@ -1,8 +1,8 @@
 ---
 # vars file for invenio-docker-role
-pre-requisites:
+prerequisites:
   RedHat:
-    - "@Development Tools" 
+    - "@Development Tools"
     - git
     - wget
     - redis
