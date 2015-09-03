@@ -1,7 +1,7 @@
 ---
 # vars file for invenio-docker-role
 prerequisites:
-  - RedHat:
+  RedHat:
     - "@Development Tools"
     - vim
     - git
@@ -11,8 +11,9 @@ prerequisites:
     - mysql-devel
     - libxml2-devel
     - libxslt-devel
-    - python-pip python-virtualenvwrapper
-  - Debian:
+    - python-pip
+    - python-virtualenvwrapper
+  Debian:
     - vim
     - build-essential
     - git
