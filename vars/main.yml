@@ -28,12 +28,28 @@ prerequisites:
     - python-dev
     - virtualenvwrapper subversion
     - apache2-mpm-prefork
-
-              mysql-server mysql-client python-mysqldb \
-              python-4suite-xml python-simplejson python-xml \
-              gnuplot poppler-utils \
-              gs-common clisp gettext libapache2-mod-wsgi unzip \
-              python-dateutil python-rdflib python-pyparsing \
-              python-gnuplot python-magic pdftk html2text giflib-tools \
-              pstotext netpbm python-pypdf python-chardet python-lxml \
-              python-unidecode redis-server python-redis
+    - mysql-client
+    - python-mysqldb
+    - python-4suite-xml
+    - python-simplejson
+    - python-xml
+    - gnuplot poppler-utils
+    - gs-common
+    - clisp
+    - gettext
+    - libapache2-mod-wsgi
+    - unzip
+    - python-dateutil
+    - python-rdflib
+    - python-pyparsing
+    - python-gnuplot
+    - python-magic
+    - pdftk
+    - html2text
+    - giflib-tools
+    - pstotext
+    - netpbm
+    - python-pypdf
+    - python-chardet
+    - python-lxml
+    - python-unidecode
