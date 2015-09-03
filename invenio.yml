@@ -2,10 +2,11 @@
 - name: Fix TTY
   hosts: localhost
   tasks:
-    - replace:
-      replace: "#Defaults requiretty"
-      dest: /etc/sudoers
-      regexp: '^Defaults requiretty'
+    - name: Fix TTY
+      replace:
+        replace: "#Defaults requiretty"
+        dest: /etc/sudoers
+        regexp: '^Defaults requiretty'
 
 - name: Invenio role
   hosts: localhost
