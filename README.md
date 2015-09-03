@@ -3,6 +3,8 @@
 invenio-docker-role
 =========
 
+**This role is tested with Invenio 1.2.1**
+
 `invenio-docker-role` - a role to deliver [invenio](https://github.com/inveniosoftware/invenio).
 
 Invenio is built with
