@@ -33,7 +33,6 @@ prerequisites:
     - apache2-mpm-prefork
     - mysql-client
     - python-mysqldb
-    - python-4suite-xml
     - python-simplejson
     - python-xml
     - gnuplot poppler-utils
