@@ -19,7 +19,7 @@ before_install:
   - docker pull centos:6
 
 script:
-  - docker build . $DOCKERFILE
+  - docker build -f $DOCKERFILE .
 
 notifications:
   slack: scigaia:byLKjoXfG8AKlsMgVK7q3Ooz
