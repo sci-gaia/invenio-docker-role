@@ -19,5 +19,8 @@ ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
 WORKDIR $HOME
 RUN git clone https://github.com/brucellino/invenio-docker-role.git
 WORKDIR invenio-docker-role
+RUN git pull
+WORKDIR $HOME
 RUN pwd ; ls
+RUN cp invenio-docker-role/invenio.yml .
 RUN ansible-playbook -c local invenio.yml
