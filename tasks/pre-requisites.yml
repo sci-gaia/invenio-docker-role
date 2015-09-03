@@ -1,5 +1,9 @@
 ---
 # pre-requisites.yml
+- name: prerequisites debug
+  debug:
+    var: prerequisites.Debian
+
 - name: Install OS base pre-requisites (Debian)
   sudo: true
   apt:
