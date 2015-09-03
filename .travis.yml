@@ -6,17 +6,20 @@ sudo: required
 services:
   - docker
 
+env:
+  DOCKERFILE=Dockerfile.centos
+  DOCKERFILE=Dockerfile.ubuntu
 
 cache:
   - apt
   - pip
 
 before_install:
-  - docker pull ubuntu:14.04
+  - docker pull ubuntu:14.04.3
   - docker pull centos:6
 
 script:
-  - docker build .
+  - docker build . $DOCKERFILE
 
 notifications:
   slack: scigaia:byLKjoXfG8AKlsMgVK7q3Ooz
