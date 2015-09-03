@@ -28,7 +28,8 @@ prerequisites:
     - libssl-dev
     - software-properties-common
     - python-dev
-    - virtualenvwrapper subversion
+    - virtualenvwrapper
+    - subversion
     - apache2-mpm-prefork
     - mysql-client
     - python-mysqldb
