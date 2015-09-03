@@ -24,7 +24,8 @@ prerequisites:
     - libjpeg-dev
     - libfreetype6-dev
     - libtiff-dev
-    - libffi-dev libssl-dev
+    - libffi-dev
+    - libssl-dev
     - software-properties-common
     - python-dev
     - virtualenvwrapper subversion
