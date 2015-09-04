@@ -3,12 +3,12 @@
 FROM centos:6
 MAINTAINER Bruce Becker <bbecker@csir.co.za>
 # We prepare the machine for ansble
-RUN yum clean all && \
-    yum -y install epel-release && \
-    yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip
+RUN yum clean all
+RUN yum -y install epel-release
+RUN yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip sudo
 RUN pip install six
 RUN mkdir /etc/ansible/
-RUN echo '[local]\nlocalhost\n' > /etc/ansible/hosts
+RUN echo '[local]\nlocalhost\n' |  tee --append /etc/ansible/hosts
 RUN mkdir /opt/ansible/
 RUN git clone --recursive https://github.com/ansible/ansible.git /opt/ansible/ansible
 WORKDIR /opt/ansible/ansible
@@ -18,10 +18,6 @@ ENV PATH /opt/ansible/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin
 ENV PYTHONPATH /opt/ansible/ansible/lib
 ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
 WORKDIR /root
-RUN git clone https://github.com/brucellino/invenio-docker-role.git
-WORKDIR invenio-docker-role
-RUN git pull
-WORKDIR /root
-RUN pwd ; ls
-RUN cp invenio-docker-role/invenio.yml .
-RUN ansible-playbook -c local invenio.yml
+ENV HOME /root
+RUN mkdir /root/roles
+RUN ls

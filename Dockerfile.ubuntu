@@ -16,6 +16,6 @@ ENV PATH /opt/ansible/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin
 ENV PYTHONPATH /opt/ansible/ansible/lib
 ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
 WORKDIR /root
-RUN git clone https://github.com/brucellino/invenio-docker-role.git roles/invenio-docker-role
-RUN cp roles/invenio-docker-role/invenio.yml .
-RUN ansible-playbook -c local invenio.yml
+ENV HOME /root
+RUN mkdir /root/roles
+RUN ls
