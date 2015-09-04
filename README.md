@@ -14,6 +14,19 @@ Invenio is built with
   * redis
 
 
+# Run with Docker
+
+This role has been tested with [Docker](http://docker.io) containers for the two different operating systems. The containers that the playbook have been tested with are
+
+  *
+  *
+
+Testing is done as follows:
+
+```bash
+    docker run -v /home/becker/invenio-docker-role:/root/roles/invenio-docker-role brucellino/invenio:test-ubuntu /bin/bash -c 'cp roles/invenio-docker-role/invenio.yml . ; ansible-playbook -c local invenio.yml'
+```
+
 Requirements
 ------------
 
