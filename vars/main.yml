@@ -13,6 +13,7 @@ prerequisites:
     - libxslt-devel
     - python-pip
     - python-virtualenvwrapper
+    - postfix
   Debian:
     - vim
     - build-essential
@@ -55,3 +56,4 @@ prerequisites:
     - python-chardet
     - python-lxml
     - python-unidecode
+    - postfix
