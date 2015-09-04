@@ -24,8 +24,10 @@ This role has been tested with [Docker](http://docker.io) containers for the two
 Testing is done as follows:
 
 ```bash
-    docker run -v /home/becker/invenio-docker-role:/root/roles/invenio-docker-role brucellino/invenio:test-ubuntu /bin/bash -c 'cp roles/invenio-docker-role/invenio.yml . ; ansible-playbook -c local invenio.yml'
+    docker run -t -v /home/becker/invenio-docker-role:/root/roles/invenio-docker-role brucellino/invenio:test-ubuntu /bin/bash -c 'cp roles/invenio-docker-role/invenio.yml . ; ansible-playbook -c local invenio.yml'
 ```
+
+***Note : you need the `-t` to give Ansible a TTY to work with***
 
 Requirements
 ------------
