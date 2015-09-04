@@ -9,17 +9,20 @@ services:
 env:
   DOCKERFILE=Dockerfile.centos
   DOCKERFILE=Dockerfile.ubuntu
+  CONTAINER='brucellino/invenio:test-ubuntu'
+  CONTAINER="brucellino/invenio:test-centos"
 
 cache:
   - apt
   - pip
 
 before_install:
-  - docker pull ubuntu:14.04.3
-  - docker pull centos:6
+  - docker pull brucellino/invenio:test-ubuntu
+  - docker pull brucellino/invenio:test-centos
 
 script:
-  - docker build -f $DOCKERFILE .
+#  - docker build -f $DOCKERFILE .
+  - docker run -v invenio-docker-role:/root/roles/invenio-docker-role $CONTAINER /bin/bash -c 'cp roles/invenio-docker-role/invenio.yml . ; ansible-playbook -c local invenio.yml'
 
 notifications:
   slack: scigaia:byLKjoXfG8AKlsMgVK7q3Ooz
