@@ -7,7 +7,7 @@ prerequisites:
     - git
     - wget
     - redis
-    - pytho@-dvel
+    - python-devel
     - mysql-devel
     - libxml2-devel
     - libxslt-devel
