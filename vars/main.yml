@@ -34,9 +34,9 @@ prerequisites:
     - mysql-client
     - python-mysqldb
     - python-simplejson
-    - python-xml
-    - gnuplot poppler-utils
-    - gs-common
+    - gnuplot
+    - poppler-utils
+    - libgs9-common
     - clisp
     - gettext
     - libapache2-mod-wsgi
