@@ -1,0 +1,57 @@
+[Invenio]
+CFG_SITE_URL = {{ site.url }}
+CFG_SITE_SECURE_URL = {{ site.url_secure }}
+CFG_SITE_ADMIN_EMAIL =  admin@sci-gaia.eu
+CFG_SITE_SUPPORT_EMAIL = admin@sci-gaia.eu
+CFG_SITE_NAME = Open Access Repository
+CFG_SITE_LANG = en
+CFG_SITE_LANGS = en,fr
+CFG_SITE_NAME_INTL_en = Open Access Repository
+CFG_SITE_NAME_INTL_fr = Open Access Repository
+
+CFG_DATABASE_NAME = {{ database.name }}
+CFG_DATABASE_USER = {{ database.user }}
+CFG_DATABASE_PASS = oarinvenio
+
+CFG_WEBALERT_ALERT_ENGINE_EMAIL = admin@sci-gaia.eu
+CFG_WEBCOMMENT_ALERT_ENGINE_EMAIL = opendata_log@ct.infn.it
+CFG_WEBCOMMENT_DEFAULT_MODERATOR = admin@sci-gaia.eu
+CFG_BIBAUTHORID_AUTHOR_TICKET_ADMIN_EMAIL = admin@sci-gaia.eu
+CFG_BIBCATALOG_SYSTEM_EMAIL_ADDRESS = admin@sci-gaia.eu
+CFG_MISCUTIL_SMTP_HOST = mbox.ct.infn.it
+CFG_BIBSCHED_PROCESS_USER = www-data
+CFG_WEBSESSION_STORAGE = mysql
+CFG_PATH_FFMPEG = /usr/local/bin/ffmpeg
+CFG_PATH_FFPROBE = /usr/local/bin/ffprobe
+CFG_PATH_MEDIAINFO = /usr/bin/mediainfo
+CFG_WEBCOMMENT_USE_RICH_EDITOR = true
+CFG_WEBSEARCH_USE_MATHJAX_FOR_FORMATS = hd,hb
+CFG_WEBCOMMENT_USE_MATHJAX_IN_COMMENTS = 1
+CFG_WEBSUBMIT_USE_MATHJAX = 1
+CFG_MATHJAX_HOSTING = local
+CFG_BIBINDEX_REMOVE_HTML_MARKUP = 1
+CFG_MATHJAX_RENDERS_MATHML = 0
+CFG_WEBSEARCH_USE_JSMATH_FOR_FORMATS = hd,hb
+CFG_BIBEDIT_KB_INSTITUTIONS = InstitutionsCollection
+CFG_BIBEDIT_AUTOCOMPLETE_INSTITUTIONS_FIELDS = 100__u,700__u,701__u,502__c
+CFG_OAI_ID_PREFIX = oar.sci-gaia.eu
+CFG_OAI_SAMPLE_IDENTIFIER = oai:oar.sci-gaia.eu:890
+CFG_OAI_IDENTIFY_DESCRIPTION = <description>
+    <eprints xmlns="http://www.openarchives.org/OAI/1.1/eprints"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/1.1/eprints
+                           http://www.openarchives.org/OAI/1.1/eprints.xsd">
+        <content>
+        <URL>http://oar.sci-gaia.eu/</URL>
+        </content>
+        <metadataPolicy>
+        <text>Free and unlimited use by anybody with obligation to refer to original record</text>
+        </metadataPolicy>
+        <dataPolicy>
+        <text>1. Access to some or all full items is controlled.the content is not changed in any way3. Full items must not be harvested by robots except transiently for full-text indexing or citation analysis4. Full items must not be sold commercially in any format or medium without formal permission of the copyright holders.5. This repository is not the publisher; it is merely the online archive.</text>
+        </dataPolicy>
+        <submissionPolicy>
+        <text>Submission restricted. Submitted documents are subject of approval by OAI repository admins.</text>
+        </submissionPolicy>
+    </eprints>
+  </description>

@@ -16,5 +16,9 @@
   command: "make {{ item }}"
   args:
     chdir: "{{ invenio.build_dir}}/invenio-{{ invenio.version }}/"
-  with_items: "{{ invenio.plugin_install }}"
+  with_items:
+    - "{{ invenio.plugin_install }}"
   register: addons
+  # Should have a creates= here, and a separate list of variables and using with_together.
+  # but this requires a parallel set of data { name, file }
+  failed_when: false

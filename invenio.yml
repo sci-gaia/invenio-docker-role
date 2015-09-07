@@ -7,6 +7,12 @@
         replace: "#Defaults requiretty"
         dest: /etc/sudoers
         regexp: '^Defaults requiretty'
+- name: Temporary fix to crytpo
+  hosts: localhost
+  tasks:
+    pip:
+      name: cryptography
+      state: absent
 
 - name: Invenio role
   hosts: localhost

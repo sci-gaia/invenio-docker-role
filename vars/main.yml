@@ -66,6 +66,8 @@ prerequisites:
     - postfix
     - python-ecdsa
     - libhdf5-dev
+# jdk is necessary for some addons - Solr
+    - default-jdk
 
 mysqlserver:
   version: 5.5
@@ -73,7 +75,10 @@ mysqlserver:
     - Redhat: "mysql-server"
     - Debian: "mysql-server"
 
+# variables related to invenio that you want to use and how you want to build it
 invenio:
+  user: www-data
+  group: www-data
 # the remote directory used to build invenio
   build_dir: /root/invenio
   install_dir: /opt/invenio
@@ -92,3 +97,12 @@ invenio:
     - install-mediaelement
     - install-solrutils
     - install-js-test-driver
+
+site:
+  url: http://localhost
+  url_secure: https://localhost
+
+
+database:
+    name: OARInvenio
+    user: invenio

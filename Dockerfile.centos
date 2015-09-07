@@ -1,6 +1,6 @@
 # Docker file for invenio from
 # https://github.com/invenio/invenio/blob/master/INSTALL.rst
-FROM centos:6
+FROM centos:7
 MAINTAINER Bruce Becker <bbecker@csir.co.za>
 # We prepare the machine for ansble
 RUN yum clean all

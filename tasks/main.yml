@@ -5,3 +5,4 @@
 - include: database-client.yml
 - include: invenio-install.yml
 - include: invenio-build.yml
+- include: invenio-config.yml

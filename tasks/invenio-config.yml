@@ -1,0 +1,28 @@
+# Invenio config tasks
+---
+- name: Ensure that group exists
+  user:
+    name: "{{ invenio.group }}"
+    state: present
+- name: Ensure that user exists
+  user:
+    name: "{{ invenio.user }}"
+    groups: "{{ invenio.group }}"
+    state: present
+    system: yes
+    comment: invenio web engine user
+
+- name: Ensure that invenio directory is properly owned
+  file:
+    path: "{{ invenio.install_dir }}"
+    owner: "{{ invenio.user }}"
+    group: "{{ invenio.group }}"
+    mode: 0777
+
+- name: Template invenio-local config
+  template:
+    src: opt/invenio/etc/invenio-local.conf.j2
+    dest: /opt/invenio/etc/invenio-local.conf
+    owner: "{{ invenio.user }}"
+    group: "{{ invenio.group }}"
+    mode: u=rw,g=r,o=r
