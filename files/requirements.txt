@@ -30,3 +30,6 @@ redis==2.9.0
 nydus==0.10.6
 Cerberus==0.5
 matplotlib
+pyopenssl
+ndg-httpsclient
+pyasn1

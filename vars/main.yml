@@ -42,6 +42,7 @@ prerequisites:
     - gettext
     - libapache2-mod-wsgi
     - unzip
+    - pkg-config
     - python-dateutil
     - python-rdflib
     - python-pyparsing
@@ -59,7 +60,7 @@ prerequisites:
     - postfix
 
 piprequirements:
-  
+
 
 mysqlserver:
   version: 5.5
