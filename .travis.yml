@@ -22,7 +22,7 @@ before_install:
 
 script:
 #  - docker build -f $DOCKERFILE .
-  - docker run -v $PWD:/root/roles/invenio-docker-role $CONTAINER /bin/bash -c 'cp roles/invenio-docker-role/invenio.yml . ; ansible-playbook -c local invenio.yml'
+  - docker run -t -v $PWD:/root/roles/invenio-docker-role $CONTAINER /bin/bash -c 'cp roles/invenio-docker-role/invenio.yml . ; ansible-playbook -c local invenio.yml'
 
 notifications:
   slack: scigaia:byLKjoXfG8AKlsMgVK7q3Ooz
