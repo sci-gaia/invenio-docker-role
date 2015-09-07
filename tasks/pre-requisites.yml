@@ -16,7 +16,12 @@
   with_items: "{{ prerequisites[ansible_os_family] }}"
   when: ansible_os_family  == 'RedHat'
 
+- name: get the requirements file locally
+  copy:
+    src: requirements.txt
+    dest: /tmp/requirements.txt
+
 - name: Install the recommended packages
   sudo: true
   pip:
-    requirements: files/requirements.txt
+    requirements: /tmp/requirements.txt
