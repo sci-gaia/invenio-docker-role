@@ -1,0 +1,5 @@
+---
+# firewall-ubuntu.yml
+- name: Firewall rules (RedHat)
+  debug:
+    msg: "do nothing till you hear it from me."
