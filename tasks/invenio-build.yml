@@ -1,5 +1,7 @@
 # building invenio ... arg.
 ---
+
+# This step is probably not idempotent.
 - name: configure Invenio build
   command: "{{ item }}"
   args:
@@ -9,4 +11,10 @@
     - "{{ invenio.build_dir }}/invenio-{{ invenio.version }}/configure --prefix={{ invenio.install_dir }}"
     - make
     - make install
-    
+
+- name: Install Addons
+  command: "make {{ item }}"
+  args:
+    chdir: "{{ invenio.build_dir}}/invenio-{{ invenio.version }}/"
+  with_items: "{{ invenio.plugin_install }}"
+  register: addons

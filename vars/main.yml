@@ -23,6 +23,7 @@ prerequisites:
     - vim
     - build-essential
     - git
+    - wget
     - redis-server
     - libmysqlclient-dev
     - libxml2-dev
@@ -81,3 +82,13 @@ invenio:
 # the tarball has the form <name>-<version>.tar.gz  and has associated .md5 and .sig
   tarball_name: invenio
   url: http://invenio-software.org/download/
+# there are several invenio plugins which you can optionally install
+# These are done with make-
+  plugin_install:
+    - install-mathjax-plugin
+    - install-jquery-plugins
+    - install-ckeditor-plugin
+    - install-pdfa-helper-files
+    - install-mediaelement
+    - install-solrutils
+    - install-js-test-driver
