@@ -5,7 +5,7 @@ This is the manual installation guide for which the role was written. Translated
 ## Prerequisites
 
   * OS: Debian, Gentoo, SL, Ubuntu are supported.
-  * **Manadtory Packages**: (Note: the actual packages are contained in `vars/main.yml` - these are the ones mentioned by the Invenio team. Some changes have been made). If you are using Debian GNU/Linux ``Lenny'' or later, then you can install most of the prerequisites and recommendations with apt:
+  * **Mandatory Packages**: (Note: the actual packages are contained in `vars/main.yml` - these are the ones mentioned by the Invenio team. Some changes have been made). If you are using Debian GNU/Linux ``Lenny'' or later, then you can install most of the prerequisites and recommendations with apt:
     * python-dev
     * apache2-mpm-prefork
     * mysql-server
@@ -214,7 +214,7 @@ files useful for verifying the integrity of the tarball.
     $ wget http://invenio-software.org/download/invenio-1.2.1.tar.gz.md5
     $ wget http://invenio-software.org/download/invenio-1.2.1.tar.gz.sig
 ```
-Verify 
+Verify
 
 ` $ md5sum -c invenio-1.2.1.tar.gz.md5
 

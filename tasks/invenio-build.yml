@@ -1,0 +1,12 @@
+# building invenio ... arg.
+---
+- name: configure Invenio build
+  command: "{{ item }}"
+  args:
+    chdir: "{{ invenio.build_dir }}/invenio-{{ invenio.version }}/"
+  register: config
+  with_items:
+    - "{{ invenio.build_dir }}/invenio-{{ invenio.version }}/configure --prefix={{ invenio.install_dir }}"
+    - make
+    - make install
+    

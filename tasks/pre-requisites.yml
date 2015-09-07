@@ -16,19 +16,27 @@
   with_items: "{{ prerequisites[ansible_os_family] }}"
   when: ansible_os_family  == 'RedHat'
 
+- name: Make sure pip is the latest
+  pip:
+    name: pip
+    state: latest
+
 # We need to push the requirements file to the remote, even if it's not really a remote.
-- name: get the requirements file locally
-  copy:
-    src: "{{ item }}"
-    dest: "/tmp/{{ item }}"
-  with_fileglob:
-    - requirements.txt
-    - requirements-extra.txt
+# - name: get the requirements file locally
+#   copy:
+#     src: "{{ item }}"
+#     dest: "/tmp/{{ item }}"
+#   with_fileglob:
+#     - requirements.txt
+#     - requirements-extra.txt
+
 
 - name: Install the recommended packages
   sudo: true
   pip:
-    requirements: /tmp/{{ item }}
-  with_items:
+    requirements: "{{ item }}"
+    extra_args: '--no-cache-dir'
+  with_fileglob:
+    - security.txt
     - requirements.txt
     - requirements-extra.txt

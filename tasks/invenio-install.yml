@@ -1,0 +1,31 @@
+# tasks to download and install invenino from src
+---
+- name: Make build directory
+  file:
+    path: " {{ invenio.build_dir }}"
+    state: directory
+    mode: 0755
+
+# - name: Download invenio
+#   get_url:
+#     url: "{{ invenio.url }}/{{ invenio.tarball_name }}-{{ invenio.version }}.{{ item }}"
+#     dest: "{{ invenio.build_dir }}/{{ item }}"
+#   with_items:
+#     - tar.gz
+#     - tar.gz.sig
+#     - tar.gz.md5
+
+- name: unarchive the tarball
+  unarchive:
+    src: "{{ invenio.url }}/{{ invenio.tarball_name }}-{{ invenio.version }}.tar.gz"
+    dest: "{{ invenio.build_dir }}"
+    copy: no
+    creates: "{{ invenio.build_dir }}/{{ invenio.tarball_name }}-{{ invenio.version }}/configure"
+
+
+# this installs from v2.0.0 onwards.
+# - name: install invenio (from pip)
+#   pip:
+#     name: invenio
+#     version: "{{ invenio.version }}"
+#     state: present

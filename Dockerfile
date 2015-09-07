@@ -1,6 +1,6 @@
 # Docker file for invenio from
 # https://github.com/inveniosoftware/invenio/blob/master/INSTALL.rst
-FROM ansible/ubuntu14.04-ansible
+FROM ubuntu:14.04.3
 MAINTAINER Bruce Becker <bbecker@csir.co.za>
 WORKDIR /root
 RUN git clone https://github.com/brucellino/invenio-docker-role.git roles/invenio-docker-role

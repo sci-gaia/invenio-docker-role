@@ -14,6 +14,11 @@ prerequisites:
     - python-pip
     - python-virtualenvwrapper
     - postfix
+    - libffi-devel
+    - hdf5-devel
+    - freetype
+    - freetype-devel
+    - libpng-devel
   Debian:
     - vim
     - build-essential
@@ -59,9 +64,20 @@ prerequisites:
     - python-unidecode
     - postfix
     - python-ecdsa
+    - libhdf5-dev
 
 mysqlserver:
   version: 5.5
   name:
     - Redhat: "mysql-server"
     - Debian: "mysql-server"
+
+invenio:
+# the remote directory used to build invenio
+  build_dir: /root/invenio
+  install_dir: /opt/invenio
+# The version used
+  version: 1.2.1
+# the tarball has the form <name>-<version>.tar.gz  and has associated .md5 and .sig
+  tarball_name: invenio
+  url: http://invenio-software.org/download/
