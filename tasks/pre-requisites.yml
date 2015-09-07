@@ -16,12 +16,19 @@
   with_items: "{{ prerequisites[ansible_os_family] }}"
   when: ansible_os_family  == 'RedHat'
 
+# We need to push the requirements file to the remote, even if it's not really a remote.
 - name: get the requirements file locally
   copy:
-    src: requirements.txt
-    dest: /tmp/requirements.txt
+    src: "{{ item }}"
+    dest: "/tmp/{{ item }}"
+  with_fileglob:
+    - requirements.txt
+    - requirements-extra.txt
 
 - name: Install the recommended packages
   sudo: true
   pip:
-    requirements: /tmp/requirements.txt
+    requirements: /tmp/{{ item }}
+  with_items:
+    - requirements.txt
+    - requirements-extra.txt
