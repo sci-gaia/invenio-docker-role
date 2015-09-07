@@ -57,3 +57,12 @@ prerequisites:
     - python-lxml
     - python-unidecode
     - postfix
+
+piprequirements:
+  
+
+mysqlserver:
+  version: 5.5
+  name:
+    - Redhat: "mysql-server"
+    - Debian: "mysql-server"

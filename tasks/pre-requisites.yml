@@ -15,3 +15,8 @@
     state: present
   with_items: "{{ prerequisites[ansible_os_family] }}"
   when: ansible_os_family  == 'RedHat'
+
+- name: Install the recommended packages
+  sudo: true
+  pip:
+    requirements: files/requirements.txt

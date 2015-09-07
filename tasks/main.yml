@@ -1,3 +1,5 @@
 ---
 # tasks file for invenio-docker-role
 - include: pre-requisites.yml
+- include: firewall-{{ ansible_os_family }}.yml
+- include: database-client.yml
